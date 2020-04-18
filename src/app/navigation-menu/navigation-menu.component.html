@@ -1,0 +1,39 @@
+<mat-toolbar>
+    <a [routerLink]="['/']"><button class="button" mat-raised-button style="margin: 5px">Home</button></a>
+</mat-toolbar>
+<mat-toolbar>
+    <a><button class="button" mat-raised-button [matMenuTriggerFor]="indiviCounselMenu" style="margin: 4px">Individual Counseling</button></a>
+</mat-toolbar>
+<mat-menu #indiviCounselMenu="matMenu">
+    <button mat-menu-item routerLink="/scheduleappointment">
+        <span>Schedule an appointment</span>
+    </button>
+    <button mat-menu-item routerLink="/viewappointment">
+        <span>View Appointment Details</span>
+    </button>
+</mat-menu>
+<mat-toolbar>
+    <a><button class="button" mat-raised-button style="margin: 5px">Group Meetups</button></a>
+</mat-toolbar>
+<mat-toolbar>
+    <a><button class="button" mat-raised-button [matMenuTriggerFor]="menu" style="margin: 5px">Blogs</button></a>
+</mat-toolbar>
+<mat-menu #menu="matMenu">
+    <button mat-menu-item routerLink="/listBlogs">
+        <span>List Blogs</span>
+    </button>
+    <button mat-menu-item routerLink="/addBlog">
+        <span>Add Blog Entry</span>
+    </button>
+</mat-menu>
+<mat-toolbar>
+    <a><button class="button" mat-raised-button [matMenuTriggerFor]="resourceMenu" style="margin: 5px">Resources</button></a>
+</mat-toolbar>
+<mat-menu #resourceMenu="matMenu">
+    <button mat-menu-item routerLink="/listResources">
+        <span>List Resources</span>
+    </button>
+    <button mat-menu-item routerLink="/addResource">
+        <span>Add Resource</span>
+    </button>
+</mat-menu>
